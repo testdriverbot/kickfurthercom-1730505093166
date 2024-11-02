@@ -1,0 +1,12 @@
+version: 4.0.79
+steps:
+  - prompt: If a cookie banner is present, click "Allow" or "Accept."
+    commands:
+      - command: hover-text
+        text: Allow
+        description: button to allow cookies
+        action: click
+  - prompt: Assert that the banner disappears.
+    commands:
+      - command: assert
+        expect: the cookie banner is not visible
