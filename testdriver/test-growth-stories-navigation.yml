@@ -1,0 +1,21 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Growth Stories" in the header.
+    commands:
+      - command: hover-text
+        text: Growth Stories
+        description: link in the header
+        action: click
+  - prompt: Assert that a collection of success stories or case studies is displayed.
+    commands:
+      - command: assert
+        expect: a collection of success stories is displayed
+  - prompt: >-
+      Verify that at least one story provides detailed information.  # Use the
+      content of the file from the environment
+    commands:
+      - command: scroll-until-text
+        text: Read More
+        direction: down
+      - command: assert
+        expect: detailed information is displayed for at least one story
