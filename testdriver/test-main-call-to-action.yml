@@ -1,0 +1,96 @@
+version: 4.0.79
+steps:
+  - prompt: Click the "Get Funded" button.
+    commands:
+      - command: hover-text
+        text: Get Funded
+        description: button in the header
+        action: click
+  - prompt: Assert that a sign-up or application form appears.
+    commands:
+      - command: assert
+        expect: a sign-up or application form appears
+  - prompt: Complete any required steps for application or sign up.
+    commands:
+      - command: hover-text
+        text: First Name*
+        description: first name input field
+        action: click
+      - command: type
+        text: John
+      - command: hover-text
+        text: Last Name*
+        description: last name input field
+        action: click
+      - command: type
+        text: Doe
+      - command: hover-text
+        text: Work Email*
+        description: work email input field
+        action: click
+      - command: type
+        text: johndoe@example.com
+      - command: hover-text
+        text: Company Name*
+        description: company name input field
+        action: click
+      - command: type
+        text: Doe Enterprises
+      - command: hover-text
+        text: Phone*
+        description: phone number input field
+        action: click
+      - command: type
+        text: 1234567890
+      - command: hover-text
+        text: Website URL*
+        description: website URL input field
+        action: click
+      - command: type
+        text: www.doeenterprises.com
+      - command: hover-text
+        text: Get Funded Now
+        description: submit button
+        action: click
+  - prompt: Complete any required steps for application or sign up.
+    commands:
+      - command: hover-text
+        text: My Company Sells
+        description: dropdown for company sells
+        action: click
+      - command: hover-text
+        text: Products
+        description: select products option
+        action: click
+      - command: hover-text
+        text: 'Yes'
+        description: US Entity/Owner radio button
+        action: click
+      - command: hover-text
+        text: Your company's revenue in the last 12 months*
+        description: revenue input field
+        action: click
+      - command: type
+        text: 500000
+      - command: hover-text
+        text: Get Funded Now
+        description: submit button
+        action: click
+  - prompt: Complete any required steps for application or sign up.
+    commands:
+      - command: hover-text
+        text: My Company Sells
+        description: dropdown for company type
+        action: click
+      - command: hover-text
+        text: Products
+        description: option in dropdown
+        action: click
+      - command: hover-text
+        text: US Entity/Owner?
+        description: radio button for US entity
+        action: click
+      - command: hover-text
+        text: Get Funded Now
+        description: submit button
+        action: click
