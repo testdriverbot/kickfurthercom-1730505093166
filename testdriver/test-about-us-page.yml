@@ -1,0 +1,12 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "About Us" in the header.
+    commands:
+      - command: hover-text
+        text: About Us
+        description: link in the header
+        action: click
+  - prompt: Assert that company information and team details are presented.
+    commands:
+      - command: assert
+        expect: company information and team details are visible on the page
