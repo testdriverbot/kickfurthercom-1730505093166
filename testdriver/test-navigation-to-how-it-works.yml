@@ -1,0 +1,20 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "How it works" in the header.
+    commands:
+      - command: hover-text
+        text: How it works
+        description: link in the header
+        action: click
+  - prompt: Assert that the page or section detailing the process displays correctly.
+    commands:
+      - command: assert
+        expect: Kickfurther for CPG
+  - prompt: Assert that the page or section detailing the process displays correctly.
+    commands:
+      - command: assert
+        expect: Inventory Financing & Ecommerce
+  - prompt: Assert that the page or section detailing the process displays correctly.
+    commands:
+      - command: assert
+        expect: Inventory NOW. Pay LATER.
