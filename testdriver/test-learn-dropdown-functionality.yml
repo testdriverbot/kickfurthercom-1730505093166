@@ -1,0 +1,20 @@
+version: 4.0.79
+steps:
+  - prompt: Hover over "Learn" in the header.
+    commands:
+      - command: hover-text
+        text: Learn
+        description: link in the header
+        action: hover
+  - prompt: Click a submenu item that appears.
+    commands:
+      - command: hover-text
+        text: Blog
+        description: submenu item under Learn
+        action: click
+  - prompt: >-
+      Assert the relevant educational content displays.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: Welcome to Our Blog
