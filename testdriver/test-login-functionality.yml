@@ -1,0 +1,66 @@
+version: 4.0.79
+steps:
+  - prompt: Click "Login" in the header.
+    commands:
+      - command: hover-text
+        text: Login
+        description: Login button in the header
+        action: click
+  - prompt: Assert that a login form appears.
+    commands:
+      - command: assert
+        expect: Log into your account is visible
+  - prompt: Attempt to log in with test credentials.
+    commands:
+      - command: hover-text
+        text: Email or Username
+        description: email input field
+        action: click
+      - command: type
+        text: testuser@example.com
+      - command: hover-text
+        text: Password
+        description: password input field
+        action: click
+      - command: type
+        text: password123
+      - command: hover-text
+        text: LOG IN
+        description: login button
+        action: click
+  - prompt: Attempt to log in with test credentials.
+    commands:
+      - command: hover-text
+        text: Email or Username
+        description: email input field
+        action: click
+      - command: type
+        text: anotheruser@example.com
+      - command: hover-text
+        text: Password
+        description: password input field
+        action: click
+      - command: type
+        text: newpassword123
+      - command: hover-text
+        text: LOG IN
+        description: login button
+        action: click
+  - prompt: Attempt to log in with test credentials.
+    commands:
+      - command: hover-text
+        text: Email or Username
+        description: email input field
+        action: click
+      - command: type
+        text: anotheruser@example.com
+      - command: hover-text
+        text: Password
+        description: password input field
+        action: click
+      - command: type
+        text: newpassword123
+      - command: hover-text
+        text: LOG IN
+        description: login button
+        action: click
